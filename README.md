@@ -45,10 +45,10 @@ python3 rank.py [website] [device]
 ```
 
 ### For example 
-We want to check the website https://www.uselessthingstobuy.com/ on mobile against the keyword **nothing package** we need to include the keyword on keywords.xls file and run:
+We want to check the website https://enegonelectronics.com/ on mobile against the keyword **nothing package** we need to include the keyword on keywords.xls file and run:
 
 ```shell
-python3 rank.py https://www.uselessthingstobuy.com/ mobile
+python3 rank.py https://www.enegonelectronics.com/ mobile
 ```
 
 This will output the keyword, the ranking of the keyword, the URL that is ranking on Google, the device you chose, and the date we did this rank check.
@@ -56,15 +56,15 @@ This will output the keyword, the ranking of the keyword, the URL that is rankin
 *Make sure that the device is lower case. If you misspell the device or add capital, the script will run using mobile device as default*
 
 ```shell 
-nothing+package 1 https://www.uselessthingstobuy.com/product/give-nothing-for-the-person-who-has-everything/ mobile 01-07-2020
+power bank 1 [https://www.enegonelectronics.com/collections/new-products/products/15000mah-portable-charger-power-bank](https://enegonelectronics.com/collections/new-products/products/15000mah-portable-charger-power-bank) mobile 05-07-2022
 ```
 This will also generate a CSV file in the folder where `rank.py` is located. This will include all the information the terminal is showing.
 
 For example:
 
-| Keyword         	| Rank 	| URL                                                                                        	| Device 	| Date       	|
-|-----------------	|------	|--------------------------------------------------------------------------------------------	|--------	|------------	|
-| nothing+package 	| 1    	| https://www.uselessthingstobuy.com/product/give-nothing-for-the-person-who-has-everything/ 	| mobile 	| 01-07-2020 	|
+| Keyword     |Rank | URL                                                                                         	        | Device 	| Date       	|
+|-------------|----	|-----------------------------------------------------------------------------------------------------	|--------	|-----------	|
+| power bank 	|  1 	| https://enegonelectronics.com/collections/new-products/products/15000mah-portable-charger-power-bank 	| mobile 	| 05-07-2022 	|
 
 ## Creating a shell script
 
@@ -115,11 +115,6 @@ after adding this we press esc and add `:wq` to save.
 If you want to contribute or fix anything please feel free to do so. 
 
 If you have any question or need help setting this up please open an issue and will try to help.
-
-
-**If you have a werkzeug Error Read this** As of February 2020 `werkzug` upgraded to 1.0.0 and RoboBrowser lazy developers havent fixed. To fix this you need to go to your Robobrowser folder on your computer something like (/Users/yourusername/opt/anaconda3/lib/python3.7/site-packages/robobrowser/) and open `browser.py` and add change ```from werkzeug import cached_property  ``` to ```from werkzeug.utils import cached_property```
-
-Please take a look at this url for more info: [Link to issue](https://github.com/jmcarp/robobrowser/issues/93)
 
 
 
